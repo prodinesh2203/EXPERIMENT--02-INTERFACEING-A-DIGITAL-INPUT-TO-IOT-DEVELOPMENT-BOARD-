@@ -1,8 +1,8 @@
-###  DATE: 
+###  DATE: 21/02/2024
 
-###  NAME: 
-###  ROLL NO :
-###  DEPARTMENT: 
+###  NAME: DINESH.M
+###  ROLL NO :212222043002
+###  DEPARTMENT: CSE
 
 
 # EXPERIMENT--02-INTERFACING-A-DIGITAL-INPUT-TO-IOT-DEVELOPMENT-BOARD-
@@ -73,16 +73,61 @@ The full form of an ARM is an advanced reduced instruction set computer (RISC) m
 
 
 17. check for execution of the output by switching the board to run mode 
-
-
-
+```C
 ## STM 32 CUBE PROGRAM :
+#include "main.h"
+
+#include "stdio.h"
+
+bool IRSENSOR;
+
+void irpair()
+
+while(1)
+{
+   irpair();
+}
+
+void irpair()
+
+{
+
+  IRSENSOR=HAL_GPIO_ReadPin(GPIOA,GPIO_PIN_4);
+  
+  if(IRSENSOR==0)
+  
+  {
+      HAL_GPIO_Writepin(GPIOA, GPIO_PIN_0, RESET);
+      
+      HAL_Delay(1000);
+      
+      HAL_GPIO_Writepin(GPIOA, GPIO_PIN_0, SET);
+      
+              HAL_Delay(1000);
+              
+  }
+  
+  else
+  
+  {
+      HAL_GPIO_Writepin(GPIOA, GPIO_PIN_0, RESET);
+      
+              HAL_Delay(1000);
+              
+  }
+  
+ }
+ ```
+
+ ## Output  :
+ LED OFF IMAGE
+ ![PIC1EXP2](https://github.com/prodinesh2203/EXPERIMENT--02-INTERFACEING-A-DIGITAL-INPUT-TO-IOT-DEVELOPMENT-BOARD-/assets/147474490/c0cda952-eff0-4eda-88b0-5586c05b803d)
+
+ LED ON IMAGE
+![PIC2EXP2](https://github.com/prodinesh2203/EXPERIMENT--02-INTERFACEING-A-DIGITAL-INPUT-TO-IOT-DEVELOPMENT-BOARD-/assets/147474490/f613c6a0-b8de-42e2-8704-fbbf0c82e542)
 
 
 
-## Output  :
- 
- 
  
  
 ## Result :
